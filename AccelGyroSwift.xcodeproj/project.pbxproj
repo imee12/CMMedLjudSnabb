@@ -18,6 +18,10 @@
 		9B68A9031C011C2500201198 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68A9021C011C2500201198 /* CoreMotion.framework */; };
 		9B68A9AB1C0188E900201198 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68A9AA1C0188E900201198 /* AVFoundation.framework */; };
 		9B68A9AD1C0189E100201198 /* one.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A9AC1C0189E100201198 /* one.mp3 */; };
+		9B68A9AF1C01A2EA00201198 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A9AE1C01A2EA00201198 /* TwoViewController.swift */; };
+		9B68A9B11C023AB100201198 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A9B01C023AB100201198 /* ThreeViewController.swift */; };
+		9B68A9B31C023C0600201198 /* Two.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A9B21C023C0600201198 /* Two.mp3 */; };
+		9B68A9B51C02418100201198 /* Tres.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A9B41C02418100201198 /* Tres.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		9B68A9021C011C2500201198 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		9B68A9AA1C0188E900201198 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9B68A9AC1C0189E100201198 /* one.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = one.mp3; sourceTree = "<group>"; };
+		9B68A9AE1C01A2EA00201198 /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
+		9B68A9B01C023AB100201198 /* ThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		9B68A9B21C023C0600201198 /* Two.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Two.mp3; sourceTree = "<group>"; };
+		9B68A9B41C02418100201198 /* Tres.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tres.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +119,16 @@
 			children = (
 				9B68A8D11C011C1600201198 /* AppDelegate.swift */,
 				9B68A8D31C011C1600201198 /* ViewController.swift */,
+				9B68A9B01C023AB100201198 /* ThreeViewController.swift */,
+				9B68A9AE1C01A2EA00201198 /* TwoViewController.swift */,
 				9B68A8D51C011C1600201198 /* Main.storyboard */,
 				9B68A8DB1C011C1600201198 /* Assets.xcassets */,
 				9B68A8DD1C011C1600201198 /* LaunchScreen.storyboard */,
 				9B68A8E01C011C1600201198 /* Info.plist */,
 				9B68A8D81C011C1600201198 /* AccelGyroSwift.xcdatamodeld */,
 				9B68A9AC1C0189E100201198 /* one.mp3 */,
+				9B68A9B21C023C0600201198 /* Two.mp3 */,
+				9B68A9B41C02418100201198 /* Tres.mp3 */,
 			);
 			path = AccelGyroSwift;
 			sourceTree = "<group>";
@@ -243,7 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B68A9B51C02418100201198 /* Tres.mp3 in Resources */,
 				9B68A8DF1C011C1600201198 /* LaunchScreen.storyboard in Resources */,
+				9B68A9B31C023C0600201198 /* Two.mp3 in Resources */,
 				9B68A8DC1C011C1600201198 /* Assets.xcassets in Resources */,
 				9B68A8D71C011C1600201198 /* Main.storyboard in Resources */,
 				9B68A9AD1C0189E100201198 /* one.mp3 in Resources */,
@@ -274,6 +288,8 @@
 				9B68A8DA1C011C1600201198 /* AccelGyroSwift.xcdatamodeld in Sources */,
 				9B68A8D41C011C1600201198 /* ViewController.swift in Sources */,
 				9B68A8D21C011C1600201198 /* AppDelegate.swift in Sources */,
+				9B68A9AF1C01A2EA00201198 /* TwoViewController.swift in Sources */,
+				9B68A9B11C023AB100201198 /* ThreeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

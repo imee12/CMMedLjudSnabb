@@ -1,30 +1,57 @@
 //
-//  ViewController.swift
+//  ThreeViewController.swift
 //  AccelGyroSwift
 //
-//  Created by Imee Cuison on 11/21/15.
+//  Created by Imee Cuison on 11/22/15.
 //  Copyright © 2015 Imee Cuison. All rights reserved.
 //
+
+//import UIKit
+//
+//class ThreeViewController: UIViewController {
+//
+//    override func viewDidLoad() {
+//        print("Tres is here")
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//    }
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
+//
+//    /*
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//    }
+//    */
+//
+//}
 
 import UIKit
 import CoreMotion
 import AVFoundation
 
-//this view controller will be starting point.. will not switch back to this view controller
-
-class ViewController: UIViewController {
+class ThreeViewController: UIViewController {
     
     var mySound = AVAudioPlayer()
     var mySound2 = AVAudioPlayer()
     var mySound3 = AVAudioPlayer()
-
+    
     
     //var random = Int(arc4random_uniform(3)+1)
-
     
-   // let random = Int(arc4random_uniform(UInt32(4)))
-  //  let random = arc4random()
-
+    
+    // let random = Int(arc4random_uniform(UInt32(4)))
+    //  let random = arc4random()
+    
     
     //Instance Variables
     
@@ -70,20 +97,38 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        print("Three is here")
         
         //Set Motion Manager Properties  - how often check for accel,gyro 0.2 is every 2 10ths sec
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.gyroUpdateInterval = 0.2
         
         //Start Recording Data
+        delay(3) {
+        self.restartAccelUpdates()
+        }
         
+        
+        super.viewDidLoad()
+        
+        mySound = self.setupAudioPlayerWithFile("one", type:"mp3")
+        mySound2 = self.setupAudioPlayerWithFile("Two", type:"mp3")
+        mySound3 = self.setupAudioPlayerWithFile("Tres", type:"mp3")
+        
+        
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func restartAccelUpdates () {
+        print("restart here")
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!,
             withHandler: { (accelerometerData, error) -> Void in self.outputAccelerationData(accelerometerData!.acceleration)
                 if (error != nil) {
                     print("\(error)")
                     
                 }
-
+                
         })
         
         
@@ -95,18 +140,9 @@ class ViewController: UIViewController {
                 }
                 
         })
+        
 
         
-    
-        super.viewDidLoad()
-        
-        mySound = self.setupAudioPlayerWithFile("one", type:"mp3")
-        mySound2 = self.setupAudioPlayerWithFile("Two", type:"mp3")
-        mySound3 = self.setupAudioPlayerWithFile("Tres", type:"mp3")
-
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func setupAudioPlayerWithFile(file: String, type: String) -> AVAudioPlayer  {
@@ -122,11 +158,11 @@ class ViewController: UIViewController {
     }
     
     func delay(delay:Double, closure:()->()) {
-    
-    dispatch_after(
-    dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
-    
-    
+        
+        dispatch_after(
+            dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+        
+        
     }
     
     
@@ -151,17 +187,16 @@ class ViewController: UIViewController {
         accZ?.text = "\(acceleration.z).2fg"
         
         
-    
+        
         if (acceleration.z < -0.80) {
             print("Z is here.")
             stopAccelerometerUpdates()
-
-
-          
-        //let random = Int(arc4random_uniform(UInt32(4)))
-
-            let random = 2
             
+            
+            
+          //  let random = Int(arc4random_uniform(UInt32(4)))
+           
+            let random = 1
             switch random
             {
             case 0:
@@ -176,42 +211,42 @@ class ViewController: UIViewController {
                 delay(1){
                     self.mySound.stop()
                 }
-
-               
-//                NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(3), target: self, selector: "functionHere", userInfo: nil, repeats: false)
-
+                
+                
+                //                NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(3), target: self, selector: "functionHere", userInfo: nil, repeats: false)
+                
                 break
                 
                 
                 
-
                 
                 
-
                 
-              //  ViewController(nibName: "ViewController", bundle: nil)
-
+                
+                
+                //  ViewController(nibName: "ViewController", bundle: nil)
+                
             case 1:
                 print("dos")
                 let dosFromOne = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TwoViewController") as UIViewController
                 // .instantiatViewControllerWithIdentifier() returns AnyObject! this must be downcast to utilize it
                 let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
                 appDelegate.window?.rootViewController = dosFromOne
-
+                
                 self.presentViewController(dosFromOne, animated: false, completion: nil)
-
-            
+                
+                
                 mySound2.play()
                 
                 
                 delay(1){
                     self.mySound2.stop()
                 }
-
+                
                 
                 break
                 
-
+                
             case 2:
                 print("tres")
                 let tresFromOne = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ThreeViewController") as UIViewController
@@ -220,86 +255,102 @@ class ViewController: UIViewController {
                 appDelegate.window?.rootViewController = tresFromOne
                 
                 self.presentViewController(tresFromOne, animated: false, completion: nil)
-
+                
                 mySound3.play()
                 
                 delay(1){
                     self.mySound3.stop()
                 }
-
+                
                 
                 break
             default:
                 print("Something else")
+                let dosFromOne = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TwoViewController") as UIViewController
+                // .instantiatViewControllerWithIdentifier() returns AnyObject! this must be downcast to utilize it
+                let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+                appDelegate.window?.rootViewController = dosFromOne
+                
+                self.presentViewController(dosFromOne, animated: false, completion: nil)
+                
+                
+                mySound2.play()
+                
+                
+                delay(1){
+                    self.mySound2.stop()
+                }
+                
+
                 break
             }
             //mySound.play()
         }
-
-//
-//            let audioPath = NSBundle.mainBundle().pathForResource("one", ofType: "mp3")!
-//            
-//            do {
-//                
-//                try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
-//                
-//                
-//            } catch {
-//                
-//                // Process error here
-//                print("Ain't working")
-//                
-//            }
-//            
-//            
-//        }
         
-            
-            
-            
-//          let fileURL:NSURL = NSBundle.mainBundle().URLForResource("one", withExtension: "mp3")!
-//            
-//            var error: NSError?
-//            self.audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
-//            if audioPlayer == nil {
-//                if let e = error {
-//                    print(e.localizedDescription)
-//                }
-//            }
-            
-            
-            
-            
-//
-//            var soundPath:NSURL?
-//            
-//            if let path = NSBundle.mainBundle().pathForResource("one", ofType: "mp3") {
-//                soundPath = NSURL(fileURLWithPath: path)
-//                do {
-//                    let sound = try AVAudioPlayer(contentsOfURL: soundPath!, fileTypeHint:nil)
-//                    sound.prepareToPlay()
-//                    sound.play()
-//                } catch {
-//                    //Handle the error
-//                    print("error sound")
-//                }
-//            }
-// 
+        //
+        //            let audioPath = NSBundle.mainBundle().pathForResource("one", ofType: "mp3")!
+        //
+        //            do {
+        //
+        //                try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
+        //
+        //
+        //            } catch {
+        //
+        //                // Process error here
+        //                print("Ain't working")
+        //
+        //            }
+        //
+        //
+        //        }
         
-            
-            
-            
-//            let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("one", ofType: "mp3")!)
-//            print(alertSound)
-//            
-//            
-//           var error:NSError?
-//            audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-//            audioPlayer.prepareToPlay()
-//            audioPlayer.play()
-            
+        
+        
+        
+        //          let fileURL:NSURL = NSBundle.mainBundle().URLForResource("one", withExtension: "mp3")!
+        //
+        //            var error: NSError?
+        //            self.audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: &error)
+        //            if audioPlayer == nil {
+        //                if let e = error {
+        //                    print(e.localizedDescription)
+        //                }
+        //            }
+        
+        
+        
+        
+        //
+        //            var soundPath:NSURL?
+        //
+        //            if let path = NSBundle.mainBundle().pathForResource("one", ofType: "mp3") {
+        //                soundPath = NSURL(fileURLWithPath: path)
+        //                do {
+        //                    let sound = try AVAudioPlayer(contentsOfURL: soundPath!, fileTypeHint:nil)
+        //                    sound.prepareToPlay()
+        //                    sound.play()
+        //                } catch {
+        //                    //Handle the error
+        //                    print("error sound")
+        //                }
+        //            }
+        //
+        
+        
+        
+        
+        //            let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("one", ofType: "mp3")!)
+        //            print(alertSound)
+        //
+        //
+        //           var error:NSError?
+        //            audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        //            audioPlayer.prepareToPlay()
+        //            audioPlayer.play()
+        
         //}
-
+        
         
         if fabs(acceleration.z) > fabs(currentMaxAccelZ)
         {
@@ -349,47 +400,50 @@ class ViewController: UIViewController {
     }
     
     func stopAccelerometerUpdates() {
-        print("stop accel updates from One")
-
+        print("stop accel updates")
+        
         motionManager.stopAccelerometerUpdates()
         
         delay(5){
-            print("delay working from One")
+            print("delay working from 3")
             self.printout()
-//            self.motionManager.accelerometerUpdateInterval = 1
-//            self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!,
-//            withHandler: { (accelerometerData, error) -> Void in self.outputAccelerationData(accelerometerData!.acceleration)
-//                if (error != nil) {
-//                    print("\(error)")
-//                    
-//                }
-//                
-//        })
-
-        
-        
+            //            self.motionManager.accelerometerUpdateInterval = 1
+            //            self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!,
+            //            withHandler: { (accelerometerData, error) -> Void in self.outputAccelerationData(accelerometerData!.acceleration)
+            //                if (error != nil) {
+            //                    print("\(error)")
+            //                    
+            //                }
+            //                
+            //        })
+            
+            
+            
         }
-       
-
+        
+        
     }
     
     func printout () {
-        print("waited for 5 seconds from One")
-//        self.motionManager.accelerometerUpdateInterval = 0.2
-//                    self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!,
-//                    withHandler: { (accelerometerData, error) -> Void in self.outputAccelerationData(accelerometerData!.acceleration)
-//                        if (error != nil) {
-//                            print("\(error)")
-//        
-//                        }
-//                        
-//                })
+        print("waited for 5 seconds from 3")
+        //        self.motionManager.accelerometerUpdateInterval = 0.2
+        //                    self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!,
+        //                    withHandler: { (accelerometerData, error) -> Void in self.outputAccelerationData(accelerometerData!.acceleration)
+        //                        if (error != nil) {
+        //                            print("\(error)")
+        //        
+        //                        }
+        //                        
+        //                })
         
-
+        
         
         
     }
     
     
 }
+
+
+
 
