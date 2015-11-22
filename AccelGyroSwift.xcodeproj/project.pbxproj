@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B68A8D21C011C1600201198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A8D11C011C1600201198 /* AppDelegate.swift */; };
+		9B68A8D41C011C1600201198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A8D31C011C1600201198 /* ViewController.swift */; };
+		9B68A8D71C011C1600201198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A8D51C011C1600201198 /* Main.storyboard */; };
+		9B68A8DA1C011C1600201198 /* AccelGyroSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A8D81C011C1600201198 /* AccelGyroSwift.xcdatamodeld */; };
+		9B68A8DC1C011C1600201198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A8DB1C011C1600201198 /* Assets.xcassets */; };
+		9B68A8DF1C011C1600201198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A8DD1C011C1600201198 /* LaunchScreen.storyboard */; };
+		9B68A8EA1C011C1600201198 /* AccelGyroSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A8E91C011C1600201198 /* AccelGyroSwiftTests.swift */; };
+		9B68A8F51C011C1600201198 /* AccelGyroSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68A8F41C011C1600201198 /* AccelGyroSwiftUITests.swift */; };
+		9B68A9031C011C2500201198 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68A9021C011C2500201198 /* CoreMotion.framework */; };
+		9B68A9AB1C0188E900201198 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68A9AA1C0188E900201198 /* AVFoundation.framework */; };
+		9B68A9AD1C0189E100201198 /* one.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B68A9AC1C0189E100201198 /* one.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B68A8E61C011C1600201198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B68A8C61C011C1600201198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B68A8CD1C011C1600201198;
+			remoteInfo = AccelGyroSwift;
+		};
+		9B68A8F11C011C1600201198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B68A8C61C011C1600201198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B68A8CD1C011C1600201198;
+			remoteInfo = AccelGyroSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B68A8CE1C011C1600201198 /* AccelGyroSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelGyroSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B68A8D11C011C1600201198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B68A8D31C011C1600201198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B68A8D61C011C1600201198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B68A8D91C011C1600201198 /* AccelGyroSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccelGyroSwift.xcdatamodel; sourceTree = "<group>"; };
+		9B68A8DB1C011C1600201198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B68A8DE1C011C1600201198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B68A8E01C011C1600201198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B68A8E51C011C1600201198 /* AccelGyroSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelGyroSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B68A8E91C011C1600201198 /* AccelGyroSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelGyroSwiftTests.swift; sourceTree = "<group>"; };
+		9B68A8EB1C011C1600201198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B68A8F01C011C1600201198 /* AccelGyroSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelGyroSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B68A8F41C011C1600201198 /* AccelGyroSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelGyroSwiftUITests.swift; sourceTree = "<group>"; };
+		9B68A8F61C011C1600201198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B68A9021C011C2500201198 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9B68A9AA1C0188E900201198 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9B68A9AC1C0189E100201198 /* one.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = one.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B68A8CB1C011C1600201198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68A9AB1C0188E900201198 /* AVFoundation.framework in Frameworks */,
+				9B68A9031C011C2500201198 /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B68A8E21C011C1600201198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B68A8ED1C011C1600201198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B68A8C51C011C1600201198 = {
+			isa = PBXGroup;
+			children = (
+				9B68A9AA1C0188E900201198 /* AVFoundation.framework */,
+				9B68A9021C011C2500201198 /* CoreMotion.framework */,
+				9B68A8D01C011C1600201198 /* AccelGyroSwift */,
+				9B68A8E81C011C1600201198 /* AccelGyroSwiftTests */,
+				9B68A8F31C011C1600201198 /* AccelGyroSwiftUITests */,
+				9B68A8CF1C011C1600201198 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B68A8CF1C011C1600201198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B68A8CE1C011C1600201198 /* AccelGyroSwift.app */,
+				9B68A8E51C011C1600201198 /* AccelGyroSwiftTests.xctest */,
+				9B68A8F01C011C1600201198 /* AccelGyroSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B68A8D01C011C1600201198 /* AccelGyroSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9B68A8D11C011C1600201198 /* AppDelegate.swift */,
+				9B68A8D31C011C1600201198 /* ViewController.swift */,
+				9B68A8D51C011C1600201198 /* Main.storyboard */,
+				9B68A8DB1C011C1600201198 /* Assets.xcassets */,
+				9B68A8DD1C011C1600201198 /* LaunchScreen.storyboard */,
+				9B68A8E01C011C1600201198 /* Info.plist */,
+				9B68A8D81C011C1600201198 /* AccelGyroSwift.xcdatamodeld */,
+				9B68A9AC1C0189E100201198 /* one.mp3 */,
+			);
+			path = AccelGyroSwift;
+			sourceTree = "<group>";
+		};
+		9B68A8E81C011C1600201198 /* AccelGyroSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B68A8E91C011C1600201198 /* AccelGyroSwiftTests.swift */,
+				9B68A8EB1C011C1600201198 /* Info.plist */,
+			);
+			path = AccelGyroSwiftTests;
+			sourceTree = "<group>";
+		};
+		9B68A8F31C011C1600201198 /* AccelGyroSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B68A8F41C011C1600201198 /* AccelGyroSwiftUITests.swift */,
+				9B68A8F61C011C1600201198 /* Info.plist */,
+			);
+			path = AccelGyroSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B68A8CD1C011C1600201198 /* AccelGyroSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B68A8F91C011C1600201198 /* Build configuration list for PBXNativeTarget "AccelGyroSwift" */;
+			buildPhases = (
+				9B68A8CA1C011C1600201198 /* Sources */,
+				9B68A8CB1C011C1600201198 /* Frameworks */,
+				9B68A8CC1C011C1600201198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccelGyroSwift;
+			productName = AccelGyroSwift;
+			productReference = 9B68A8CE1C011C1600201198 /* AccelGyroSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B68A8E41C011C1600201198 /* AccelGyroSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B68A8FC1C011C1600201198 /* Build configuration list for PBXNativeTarget "AccelGyroSwiftTests" */;
+			buildPhases = (
+				9B68A8E11C011C1600201198 /* Sources */,
+				9B68A8E21C011C1600201198 /* Frameworks */,
+				9B68A8E31C011C1600201198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B68A8E71C011C1600201198 /* PBXTargetDependency */,
+			);
+			name = AccelGyroSwiftTests;
+			productName = AccelGyroSwiftTests;
+			productReference = 9B68A8E51C011C1600201198 /* AccelGyroSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B68A8EF1C011C1600201198 /* AccelGyroSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B68A8FF1C011C1600201198 /* Build configuration list for PBXNativeTarget "AccelGyroSwiftUITests" */;
+			buildPhases = (
+				9B68A8EC1C011C1600201198 /* Sources */,
+				9B68A8ED1C011C1600201198 /* Frameworks */,
+				9B68A8EE1C011C1600201198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B68A8F21C011C1600201198 /* PBXTargetDependency */,
+			);
+			name = AccelGyroSwiftUITests;
+			productName = AccelGyroSwiftUITests;
+			productReference = 9B68A8F01C011C1600201198 /* AccelGyroSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B68A8C61C011C1600201198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Imee Cuison";
+				TargetAttributes = {
+					9B68A8CD1C011C1600201198 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					9B68A8E41C011C1600201198 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 9B68A8CD1C011C1600201198;
+					};
+					9B68A8EF1C011C1600201198 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 9B68A8CD1C011C1600201198;
+					};
+				};
+			};
+			buildConfigurationList = 9B68A8C91C011C1600201198 /* Build configuration list for PBXProject "AccelGyroSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B68A8C51C011C1600201198;
+			productRefGroup = 9B68A8CF1C011C1600201198 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B68A8CD1C011C1600201198 /* AccelGyroSwift */,
+				9B68A8E41C011C1600201198 /* AccelGyroSwiftTests */,
+				9B68A8EF1C011C1600201198 /* AccelGyroSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B68A8CC1C011C1600201198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68A8DF1C011C1600201198 /* LaunchScreen.storyboard in Resources */,
+				9B68A8DC1C011C1600201198 /* Assets.xcassets in Resources */,
+				9B68A8D71C011C1600201198 /* Main.storyboard in Resources */,
+				9B68A9AD1C0189E100201198 /* one.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B68A8E31C011C1600201198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B68A8EE1C011C1600201198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B68A8CA1C011C1600201198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68A8DA1C011C1600201198 /* AccelGyroSwift.xcdatamodeld in Sources */,
+				9B68A8D41C011C1600201198 /* ViewController.swift in Sources */,
+				9B68A8D21C011C1600201198 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B68A8E11C011C1600201198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68A8EA1C011C1600201198 /* AccelGyroSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B68A8EC1C011C1600201198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68A8F51C011C1600201198 /* AccelGyroSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B68A8E71C011C1600201198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B68A8CD1C011C1600201198 /* AccelGyroSwift */;
+			targetProxy = 9B68A8E61C011C1600201198 /* PBXContainerItemProxy */;
+		};
+		9B68A8F21C011C1600201198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B68A8CD1C011C1600201198 /* AccelGyroSwift */;
+			targetProxy = 9B68A8F11C011C1600201198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B68A8D51C011C1600201198 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B68A8D61C011C1600201198 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B68A8DD1C011C1600201198 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B68A8DE1C011C1600201198 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B68A8F71C011C1600201198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B68A8F81C011C1600201198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B68A8FA1C011C1600201198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AccelGyroSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.AccelGyroSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B68A8FB1C011C1600201198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AccelGyroSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.AccelGyroSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9B68A8FD1C011C1600201198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AccelGyroSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.AccelGyroSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelGyroSwift.app/AccelGyroSwift";
+			};
+			name = Debug;
+		};
+		9B68A8FE1C011C1600201198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AccelGyroSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.AccelGyroSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelGyroSwift.app/AccelGyroSwift";
+			};
+			name = Release;
+		};
+		9B68A9001C011C1600201198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AccelGyroSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.AccelGyroSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AccelGyroSwift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9B68A9011C011C1600201198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AccelGyroSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.AccelGyroSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AccelGyroSwift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B68A8C91C011C1600201198 /* Build configuration list for PBXProject "AccelGyroSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B68A8F71C011C1600201198 /* Debug */,
+				9B68A8F81C011C1600201198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B68A8F91C011C1600201198 /* Build configuration list for PBXNativeTarget "AccelGyroSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B68A8FA1C011C1600201198 /* Debug */,
+				9B68A8FB1C011C1600201198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B68A8FC1C011C1600201198 /* Build configuration list for PBXNativeTarget "AccelGyroSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B68A8FD1C011C1600201198 /* Debug */,
+				9B68A8FE1C011C1600201198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B68A8FF1C011C1600201198 /* Build configuration list for PBXNativeTarget "AccelGyroSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B68A9001C011C1600201198 /* Debug */,
+				9B68A9011C011C1600201198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B68A8D81C011C1600201198 /* AccelGyroSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B68A8D91C011C1600201198 /* AccelGyroSwift.xcdatamodel */,
+			);
+			currentVersion = 9B68A8D91C011C1600201198 /* AccelGyroSwift.xcdatamodel */;
+			path = AccelGyroSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9B68A8C61C011C1600201198 /* Project object */;
+}
